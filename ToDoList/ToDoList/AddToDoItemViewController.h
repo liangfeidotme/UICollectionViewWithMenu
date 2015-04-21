@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ToDoItem.h"
 
 @interface AddToDoItemViewController : UIViewController
+
+@property (nonatomic, strong)ToDoItem *toDoItem;
+
+- (void)textField:(NSString *)text;
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import "ToDoListTableViewController.h"
 #import "TodoItem.h"
+#import "AddToDoItemViewController.h"
 
 @interface ToDoListTableViewController ()
 
@@ -30,8 +31,15 @@
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
-    
+    AddToDoItemViewController *source = [segue sourceViewController];
+    ToDoItem *item = source.toDoItem;
+    if (item != nil) {
+        [self.todoItems addObject:item];
+        [self.tableView reloadData];
+    }
 }
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,15 +62,19 @@
     return [self.todoItems count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    ToDoItem *toDoItem = [self.todoItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = toDoItem.itemName;
     
+    if (toDoItem.completed) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -107,5 +119,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    ToDoItem *tappedItem = [self.todoItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
 
 @end
