@@ -124,3 +124,5 @@ if ([someDate compare:anotherDate] == NSOrderedAscending) {
 A `nil` value is the safest way to initialize an object pointer if you don't have another value to use, because it's perfectly acceptable in Objective-C to send a message to `nil`. If you do send a message to `nil`, obviously nothing happens.
 
 Using `self` in a class factory method means that you're referring to the class itself.
+
+
