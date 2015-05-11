@@ -55,4 +55,24 @@ The `UIApplication` object, your view objects, and your view controller objects 
 Execution States for Apps
 ---
 
+![](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Art/high_level_flow_2x.png)
 
+**App status**
+
+* Not running
+* Inactive
+    * The app is running in the foreground but is currently not receiving events.
+    * An app usually stays in this state only briefly as it transitions to a different state.
+* Active
+* Background
+* Suspended
+    * When a low-memory condition occures, the system may purge suspended apps without notice to make more space for the foreground app.
+
+
+* `application:willFinishLauchingWithOptions:`
+* `application:didFinishLaunchingWithOptions:`
+* `applicationDidBecomeActive:`
+* `applicationWillResignActive:`
+* `applicationDidEnterBackground:`
+* `applicationWillEnterForeground:`
+* `aplicationWillTerminate:`
