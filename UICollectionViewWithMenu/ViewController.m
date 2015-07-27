@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 #define NUMBER_OF_CELLS_PER_ROW 6
+#define CELL_WIDTH 166
+#define CELL_HEIGHT = 223
 
 @interface ViewController ()
 
@@ -25,12 +27,13 @@
     [super viewDidLoad];
     
     // create parent view
-    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // create an UICollectionView
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = UIEdgeInsetsMake(4, 4, 4, 4);
-    layout.minimumInteritemSpacing = 4;
+    layout.minimumInteritemSpacing = 4.f;
+    layout.minimumLineSpacing = 4.f;
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
     
     [self.collectionView setDataSource:self];
@@ -48,7 +51,7 @@
     
     for (int i = 0; i < 5; i++) {
         NSArray *sectionDataArray = [[NSArray alloc] initWithObjects:@"Hello", @"World", @"I", @"Love",
-                                     @"Android", @"iOS", @"Than", @"iOS", @"Than", @"iOS", nil];
+                                     @"Android", @"iOS", @"Than", @"iOS", @"Than", @"iOS", @"hello", @"world", nil];
         [_dataArray addObject:sectionDataArray];
     }
 }
@@ -95,7 +98,7 @@
             cell.backgroundColor = [UIColor greenColor];
         } else {
             
-            cell.hidden = YES;
+            cell.hidden = NO;
             if ([[cell.contentView subviews] count]) {
                 UILabel *label = [[cell.contentView subviews] objectAtIndex:0];
                 [label setText:@""];
