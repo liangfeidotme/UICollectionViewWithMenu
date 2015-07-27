@@ -31,7 +31,7 @@
     
     // create an UICollectionView
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.sectionInset = UIEdgeInsetsMake(4, 4, 4, 4);
+    layout.sectionInset = UIEdgeInsetsMake(4, 4, 0, 0);
     layout.minimumInteritemSpacing = 4.f;
     layout.minimumLineSpacing = 4.f;
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
@@ -51,7 +51,7 @@
     
     for (int i = 0; i < 5; i++) {
         NSArray *sectionDataArray = [[NSArray alloc] initWithObjects:@"Hello", @"World", @"I", @"Love",
-                                     @"Android", @"iOS", @"Than", @"iOS", @"Than", @"iOS", @"hello", @"world", nil];
+                                     @"Android", @"iOS", @"Than", @"iOS", @"hello", @"world", nil];
         [_dataArray addObject:sectionDataArray];
     }
 }
