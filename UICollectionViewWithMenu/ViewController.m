@@ -29,7 +29,8 @@
     
     // create an UICollectionView
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    layout.sectionInset = UIEdgeInsetsMake(4, 4, 4, 4);
+    layout.minimumInteritemSpacing = 4;
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
     
     [self.collectionView setDataSource:self];
@@ -47,7 +48,7 @@
     
     for (int i = 0; i < 5; i++) {
         NSArray *sectionDataArray = [[NSArray alloc] initWithObjects:@"Hello", @"World", @"I", @"Love",
-                                     @"Android", @"iOS", @"Than", @"iOS", @"Than", @"iOS", @"iOS", @"iOS", nil];
+                                     @"Android", @"iOS", @"Than", @"iOS", @"Than", @"iOS", nil];
         [_dataArray addObject:sectionDataArray];
     }
 }
@@ -112,12 +113,12 @@
     
     if ([self isMenuCellAtIndexPath:indexPath]) {
         if ([self willMenuCellShowAtIndexPath:indexPath]) {
-            return CGSizeMake(self.view.frame.size.width, 80);
+            return CGSizeMake(self.view.frame.size.width, 247);
         } else {
             return CGSizeZero;
         }
     }
-    return CGSizeMake(50, 50);
+    return CGSizeMake(166, 223);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -160,6 +161,11 @@
 - (void)setMenuCellSection:(NSInteger)section row:(NSInteger)row {
     _sectionOfMenuCell = section;
     _rowOfMenuCell = row;
+}
+
+- (void)setMenuCellIndexPath:(NSIndexPath *)indexPath {
+    _sectionOfMenuCell = indexPath.section;
+    _rowOfMenuCell = indexPath.row;
 }
 
 - (BOOL)willMenuCellShowAtIndexPath:(NSIndexPath *)indexPath {
