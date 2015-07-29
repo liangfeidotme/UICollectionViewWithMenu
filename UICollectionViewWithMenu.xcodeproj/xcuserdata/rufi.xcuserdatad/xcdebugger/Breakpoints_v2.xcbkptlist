@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UICollectionViewWithMenu/ViewController.m"
-            timestampString = "459674138.005881"
+            timestampString = "459712869.936857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UICollectionViewWithMenu/ViewController.m"
-            timestampString = "459674138.005881"
+            timestampString = "459712869.936857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "-collectionView:layout:sizeForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UICollectionViewWithMenu/ViewController.m"
-            timestampString = "459674138.005881"
+            timestampString = "459712869.936857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "-collectionView:layout:sizeForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,12 +58,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UICollectionViewWithMenu/ViewController.m"
-            timestampString = "459674304.563363"
+            timestampString = "459712869.936857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-collectionView:numberOfItemsInSection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UICollectionViewWithMenu/ViewController.m"
+            timestampString = "459712325.432851"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-init"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UICollectionViewWithMenu/ViewController.m"
+            timestampString = "459712869.936857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-init"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

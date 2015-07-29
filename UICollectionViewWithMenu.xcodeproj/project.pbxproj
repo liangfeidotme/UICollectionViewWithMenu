@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8337A08C1B669BCA00C78998 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 8337A08B1B669BCA00C78998 /* Item.m */; };
 		83FAE18D1B560AFE00AFF0BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FAE18C1B560AFE00AFF0BC /* main.m */; };
 		83FAE1901B560AFE00AFF0BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FAE18F1B560AFE00AFF0BC /* AppDelegate.m */; };
 		83FAE1931B560AFE00AFF0BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FAE1921B560AFE00AFF0BC /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8337A08A1B669BCA00C78998 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		8337A08B1B669BCA00C78998 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		83FAE1871B560AFE00AFF0BC /* UICollectionViewWithMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewWithMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FAE18B1B560AFE00AFF0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83FAE18C1B560AFE00AFF0BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				83FAE1971B560AFE00AFF0BC /* Images.xcassets */,
 				83FAE1991B560AFE00AFF0BC /* LaunchScreen.xib */,
 				83FAE18A1B560AFE00AFF0BC /* Supporting Files */,
+				8337A08A1B669BCA00C78998 /* Item.h */,
+				8337A08B1B669BCA00C78998 /* Item.m */,
 			);
 			path = UICollectionViewWithMenu;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8337A08C1B669BCA00C78998 /* Item.m in Sources */,
 				83FAE1931B560AFE00AFF0BC /* ViewController.m in Sources */,
 				83FAE1901B560AFE00AFF0BC /* AppDelegate.m in Sources */,
 				83FAE18D1B560AFE00AFF0BC /* main.m in Sources */,
