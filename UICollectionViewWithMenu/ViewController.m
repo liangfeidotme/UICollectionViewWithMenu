@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "OperationBar.h"
 #import "Item.h"
 
 #define NUMBER_OF_CELLS_PER_ROW 6
@@ -14,9 +15,11 @@
 #define CELL_HEIGHT 223
 
 @interface ViewController ()
+
 @property (nonatomic, copy) NSMutableArray *dataArray;
 @property (nonatomic, assign) NSInteger sectionOfMenuCell;
 @property (nonatomic, assign) NSInteger rowOfMenuCell;
+
 @end
 
 @implementation ViewController
@@ -82,11 +85,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self init];
-    // create parent view
-    // self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [aButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [aButton setTitleColor:[UIColor blackColor] forState:UIControlStateDisabled];
+    aButton.titleLabel.textColor = [UIColor redColor];
+    [aButton setTitle:@"My BUTTON" forState:UIControlStateNormal];
+    //[aButton addTarget:self action:@selector(buttonPushed) forControlEvents:UIControlEventsTouchUpInside];
+    [self.view addSubview:aButton];
     
     return;
+    
+    
+    
     // create an UICollectionView
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     //layout.sectionInset = UIEdgeInsetsMake(4, 4, 0, 0);
