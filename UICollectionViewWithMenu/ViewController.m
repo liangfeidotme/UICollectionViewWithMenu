@@ -11,8 +11,8 @@
 #import "LZCCollectionViewMenuCell.h"
 
 #define NUMBER_OF_CELLS_PER_ROW 6
-#define CELL_WIDTH 166
-#define CELL_HEIGHT 223
+#define CELL_WIDTH 50
+#define CELL_HEIGHT 50
 
 #define kCellIdentifier @"cellIdentifier"
 #define kMenuCellIdentifier @"menuCellIdentifier"
@@ -41,6 +41,11 @@
 - (NSMutableArray *)dataSource {
     if (!_dataSource) {
         _dataSource = [[NSMutableArray alloc] init];
+        
+        for (int i = 0; i < 5; i++) {
+            NSArray *sectionData = [[NSArray alloc] initWithObjects:@"This", @"is", @"my", @"first", @"iOS", @"project", nil];
+            [_dataSource addObject:sectionData];
+        }
     }
     return _dataSource;
 }
@@ -64,6 +69,9 @@
     return _collectionView;
 }
 
+
+#pragma mark implementations for data source protocol
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [[self.dataSource objectAtIndex:section] count];
 }
@@ -74,7 +82,21 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LZCCollectionViewCell *cell = (LZCCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
+    
+    NSString *title = [[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    cell.title = title;
+    
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeMake(self.view.frame.size.width, 10);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(CELL_WIDTH, CELL_HEIGHT);
 }
 
 @end

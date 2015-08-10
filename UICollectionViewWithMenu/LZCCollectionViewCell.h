@@ -11,4 +11,5 @@
 
 @interface LZCCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) NSString *title;
 @end
